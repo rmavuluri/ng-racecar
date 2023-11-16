@@ -1,0 +1,8 @@
+<div *ngIf="currentOption" class="secondary-nav">
+  <button class="back-button" (click)="backToPrimary()">Back</button>
+  <div class="nav-header">Menu for {{ currentOption }}</div>
+  <!-- Add your secondary nav options here -->
+  <button class="secondary-nav-item">Sub-option 1</button>
+  <button class="secondary-nav-item">Sub-option 2</button>
+  <button class="secondary-nav-item">Sub-option 3</button>
+</div>

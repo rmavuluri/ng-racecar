@@ -1,0 +1,9 @@
+<div class="menu-toggle" (click)="toggleMenu()">Menu</div>
+<div
+  class="left-nav"
+  [ngClass]="{ 'menu-open': menuOpen, 'menu-closed': !menuOpen }"
+>
+  <button (click)="openSecondaryNav('option1')">Option 1</button>
+  <button (click)="openSecondaryNav('option2')">Option 2</button>
+  <button (click)="openSecondaryNav('option3')">Option 3</button>
+</div>

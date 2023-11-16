@@ -1,0 +1,40 @@
+.secondary-nav {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: fixed;
+  top: 60px;
+  left: 200px;
+  height: calc(100vh - 60px);
+  background-color: #444;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}
+
+.secondary-nav .nav-header {
+  padding: 10px 15px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 1px solid gray;
+}
+
+.secondary-nav .secondary-nav-item {
+  padding: 10px 15px;
+  text-align: left;
+  background: none;
+  color: white;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.secondary-nav .secondary-nav-item:hover {
+  background-color: #555;
+}
+
+.back-button {
+  background-color: #333; /* Different color for back button */
+  font-weight: bold;
+}
