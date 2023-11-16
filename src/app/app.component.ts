@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { PrimaryNavComponent } from './primary-nav/primary-nav.component';
 import { SecondaryNavComponent } from './secondary-nav/secondary-nav.component';
 import { HeaderComponent } from './header/header.component';
+import { Subscription } from 'rxjs';
+import { MenuService } from './menu.service';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +23,13 @@ import { HeaderComponent } from './header/header.component';
 export class AppComponent {
   title = 'ng-racecar';
   selectedOption!: string;
+  private menuToggleSubscription: Subscription;
+
+  constructor(private menuService: MenuService) {
+    this.menuToggleSubscription = this.menuService.menuToggled.subscribe(
+      (isMenuOpen) => this.handleMenuToggle(isMenuOpen)
+    );
+  }
 
   updateSelectedOption(option: string) {
     this.selectedOption = option;

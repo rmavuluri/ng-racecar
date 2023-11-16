@@ -1,7 +1,4 @@
 <app-header></app-header>
-<app-primary-nav
-  (selectedOption)="updateSelectedOption($event)"
-  (menuToggled)="handleMenuToggle($event)"
-></app-primary-nav>
+<app-primary-nav (selectedOption)="selectedOption = $event"></app-primary-nav>
 <app-secondary-nav [currentOption]="selectedOption"></app-secondary-nav>
 <!-- Rest of the app's content -->
