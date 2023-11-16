@@ -1,4 +1,7 @@
 <app-header></app-header>
 <app-primary-nav (selectedOption)="selectedOption = $event"></app-primary-nav>
 <app-secondary-nav [currentOption]="selectedOption"></app-secondary-nav>
+<app-right-nav
+  (selectedRightMenuOption)="selectedRightMenuOption = $event"
+></app-right-nav>
 <!-- Rest of the app's content -->

@@ -1,0 +1,33 @@
+.right-nav {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Assuming a 60px header */
+  width: 200px;
+  position: fixed;
+  top: 60px; /* Below the header */
+  right: 0; /* Align to the right */
+  transform: translateX(100%); /* Start hidden */
+  overflow-x: hidden;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1050;
+}
+
+.right-nav.right-menu-open {
+  transform: translateX(0); /* Show menu */
+}
+
+.right-nav button {
+  padding: 10px 15px;
+  text-align: left;
+  background: none;
+  color: white;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.right-nav button:hover {
+  background-color: #555;
+}
