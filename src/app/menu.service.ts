@@ -27,7 +27,6 @@ export class MenuService {
 
   //For Right
   toggleRightMenu() {
-    console.log('In service for right...!');
     const newRightState = !this.rightMenuState.value;
     this.rightMenuState.next(newRightState);
     this.rightMenuToggled.emit(newRightState);
@@ -36,5 +35,9 @@ export class MenuService {
   //For Right
   getRightMenuState() {
     return this.rightMenuState.asObservable();
+  }
+
+  closeRightMenu() {
+    this.rightMenuState.next(false);
   }
 }

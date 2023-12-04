@@ -13,3 +13,15 @@
     z-index: 1000;
     /* Ensure it's above other elements */
 }
+
+body {
+    margin-top: 60px;
+    /* Should match the height of your header */
+}
+
+/* or, if you have a specific main content area */
+.main-content {
+    padding-left: 70px;
+    padding-top: 70px;
+    /* Should match the height of your header */
+}

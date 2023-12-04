@@ -1,11 +1,14 @@
 <div class="right-nav" [ngClass]="{ 'right-menu-open': rightMenuOpen }">
-  <button (click)="selectRightMenuOption('rightOption1')">
-    Right Option 1
+  <button routerLink="/notes" (click)="selectRightMenuOption('Notes')">
+    Notes
   </button>
-  <button (click)="selectRightMenuOption('rightOption2')">
-    Right Option 2
+  <button routerLink="/comments" (click)="selectRightMenuOption('Comments')">
+    Comments
   </button>
-  <button (click)="selectRightMenuOption('rightOption3')">
-    Right Option 3
+  <button
+    routerLink="/suggestions"
+    (click)="selectRightMenuOption('Suggestions')"
+  >
+    Suggestions
   </button>
 </div>

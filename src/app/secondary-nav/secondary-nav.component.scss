@@ -6,7 +6,7 @@
   top: 60px;
   left: 200px;
   height: calc(100vh - 60px);
-  background-color: #444;
+  background-color: yellowgreen;
   padding-top: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1050;
@@ -35,6 +35,10 @@
 }
 
 .back-button {
-  background-color: #333; /* Different color for back button */
+  color: #fff; /* Different color for back button */
   font-weight: bold;
+  padding-left: 5px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+
 }

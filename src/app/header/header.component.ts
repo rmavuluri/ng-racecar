@@ -16,7 +16,6 @@ export class HeaderComponent {
   }
   //For Right Menu
   toggleRightMenu() {
-    console.log('comng here.....!');
     this.menuService.toggleRightMenu();
   }
 }

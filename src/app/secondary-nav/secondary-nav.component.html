@@ -1,8 +1,36 @@
 <div *ngIf="currentOption" class="secondary-nav">
-  <button class="back-button" (click)="backToPrimary()"><<</button>
+  <!-- <div class="back-button" (click)="backToPrimary()">
+    << Back To {{ currentOption }}
+  </div> -->
   <div class="nav-header">Menu for {{ currentOption }}</div>
   <!-- Add your secondary nav options here -->
-  <button class="secondary-nav-item">Sub-option 1</button>
-  <button class="secondary-nav-item">Sub-option 2</button>
-  <button class="secondary-nav-item">Sub-option 3</button>
+  @if (currentOption == 'Angular') {
+  <button (click)="toggleFlyout()" class="secondary-nav-item">
+    Components
+  </button>
+  <app-overlay></app-overlay>
+  <button class="secondary-nav-item">Signals</button>
+  <button class="secondary-nav-item">Defer</button>
+  <button class="secondary-nav-item">Modules</button>
+  <button class="secondary-nav-item">Data Binding</button>
+  <button class="secondary-nav-item">Directives</button>
+  <button class="secondary-nav-item">Services</button>
+  <button class="secondary-nav-item">Routing and Navigation</button>
+  <button class="secondary-nav-item">Pipes</button>
+  <button class="secondary-nav-item">Forms</button>
+  <button class="secondary-nav-item">Reactive Programming</button>
+  <button class="secondary-nav-item">Testing</button>
+  } @else if (currentOption == 'Spring Boot') {
+  <button class="secondary-nav-item">Introduction</button>
+  <button class="secondary-nav-item">Auto-Configuration</button>
+  <button class="secondary-nav-item">Embedded Servers</button>
+  <button class="secondary-nav-item">Microservices Ready:</button>
+  <button class="secondary-nav-item">Actuator</button>
+  <button class="secondary-nav-item">Spring Initializr</button>
+  <button class="secondary-nav-item">Profiles</button>
+  <button class="secondary-nav-item">Logging and Tracing</button>
+  <button class="secondary-nav-item">Security</button>
+  } @else {
+  <button class="secondary-nav-item">introduction</button>
+  }
 </div>

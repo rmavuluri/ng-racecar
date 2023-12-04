@@ -2,10 +2,11 @@ import { Component, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuService } from '../menu.service';
 import { Subscription } from 'rxjs';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-right-nav',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './right-nav.component.html',
   styleUrl: './right-nav.component.scss',
 })
@@ -27,5 +28,6 @@ export class RightNavComponent implements OnDestroy {
 
   selectRightMenuOption(option: string) {
     this.selectedRightMenuOption.emit(option);
+    this.menuService.closeRightMenu();
   }
 }

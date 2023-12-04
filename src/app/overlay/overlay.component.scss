@@ -1,0 +1,26 @@
+.flyout {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Start off the screen */
+    width: 1200px;
+    /* Adjust as needed */
+    height: 100%;
+    background-color: #FFF;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s;
+    z-index: 1000;
+    border-top-left-radius: 10px;
+        /* Rounded corners on the top left */
+        border-bottom-left-radius: 10px;
+        /* Rounded corners on the bottom left */
+}
+
+.flyout.open {
+    right: 0;
+    /* Slide in */
+    padding:10px;
+    font-size: medium;
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+}

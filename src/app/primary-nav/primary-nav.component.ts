@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-primary-nav',
   standalone: true,

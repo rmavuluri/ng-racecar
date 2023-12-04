@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { PrimaryNavComponent } from './primary-nav/primary-nav.component';
 import { SecondaryNavComponent } from './secondary-nav/secondary-nav.component';
 import { HeaderComponent } from './header/header.component';
 import { Subscription } from 'rxjs';
 import { MenuService } from './menu.service';
 import { RightNavComponent } from './right-nav/right-nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MarkdownService } from './markdown.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,10 @@ import { RightNavComponent } from './right-nav/right-nav.component';
     SecondaryNavComponent,
     HeaderComponent,
     RightNavComponent,
+    RouterModule,
+    HttpClientModule,
   ],
+  providers: [MarkdownService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
