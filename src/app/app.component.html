@@ -5,6 +5,14 @@
   (selectedRightMenuOption)="selectedRightMenuOption = $event"
 ></app-right-nav>
 <!-- Rest of the app's content -->
+
 <div class="main-content">
+  <div>
+    @for(item of items; track item) {
+    <li>{{ item }}</li>
+    } @empty {
+    <li>No items found</li>
+    }
+  </div>
   <router-outlet></router-outlet>
 </div>

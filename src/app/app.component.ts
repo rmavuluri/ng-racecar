@@ -34,6 +34,8 @@ export class AppComponent {
   private menuToggleSubscription: Subscription;
   private rightMenuToggledSubscription: Subscription;
 
+  items = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
+
   constructor(private menuService: MenuService) {
     this.menuToggleSubscription = this.menuService.menuToggled.subscribe(
       (isMenuOpen) => this.handleMenuToggle(isMenuOpen)
